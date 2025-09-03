@@ -51,7 +51,8 @@ export async function POST(request: NextRequest) {
       email: validatedData.email,
       firstName: validatedData.firstName,
       lastName: validatedData.lastName,
-      result: result.updatedRows
+      spreadsheetId: result.spreadsheetId,
+      tableRange: result.tableRange
     });
 
     return NextResponse.json({ 
